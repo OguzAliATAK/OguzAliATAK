@@ -1,0 +1,18 @@
+
+
+study(title = "",shorttitle="200-50",overlay=true)
+
+deger_1 = input(200,minval=1,title="200")
+deger_2 = input(50,minval=1,title="50")
+
+
+ema_1 = sma(close,deger_1)
+ema_2 = sma(close,deger_2)
+
+plot(ema_1,color=yellow,linewidth=2)
+
+plot(ema_2,color=red,linewidth=2)
+
+//plotshape(cross(ema_1, ema_2) and ema_2 [1] < ema_1[1] ? true : na, style=shape.flag, text="AL",color=white,size=size.normal, location=location.belowbar,transp=false)
+
+plot(close)
